@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>SAKHI Abderrahmen | Ingénieur Informatique</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+    <h1>SAKHI Abderrahmen</h1>
+    <h2>Ingénieur principal en Informatique</h2>
+    <p class="subtitle">
+        JavaFX • Backend • Systèmes & Réseaux
+    </p>
+
+    <div class="actions">
+        <a href="#" class="btn primary">Télécharger le CV Desktop</a>
+        <a href="#about" class="btn secondary">Voir le profil</a>
+    </div>
+</header>
+
+<section id="about" class="section">
+    <h3>À propos</h3>
+    <p>
+        Ingénieur principal en informatique avec plus de 12 ans d’expérience
+        dans l’administration des systèmes, le développement d’applications
+        et la conception de solutions informatiques institutionnelles.
+    </p>
+    <p>
+        J’ai développé une application Desktop JavaFX servant de CV interactif,
+        contenant mes projets professionnels, académiques et institutionnels
+        (Journal Officiel, Décrets, Applications métiers).
+    </p>
+</section>
+
+<section class="section dark">
+    <h3>Projets</h3>
+    <ul class="list">
+        <li>Applications JavaFX pour la consultation du Journal Officiel</li>
+        <li>Recherche et classification des coréspondance administratifs</li>
+        <li>Applications métiers utilisées en environnement réel</li>
+    </ul>
+    <p class="note">
+        Les démonstrations complètes, captures d’écran et fonctionnalités
+        interactives sont disponibles exclusivement dans l’application Desktop.
+    </p>
+</section>
+
+<section class="section">
+    <h3>Compétences</h3>
+    <div class="skills">
+        <span>Java / JavaFX</span>
+        <span>Spring Boot</span>
+        <span>JEE</span>
+        <span>SQL Server / Oracle</span>
+        <span>OCR & Traitement de documents</span>
+        <span>Réseaux & Serveurs</span>
+    </div>
+</section>
+
+<section class="section dark">
+    <h3>Expérience</h3>
+    <p>
+        <strong>Ingénieur d’État en Informatique</strong><br>
+        Wilaya de Mostaganem — Depuis 2013
+    </p>
+	
+    <p>
+        <strong>Ingénieur principal en Informatique</strong><br>
+        Wilaya de Mostaganem — Depuis 2025
+    </p>
+    <ul class="list">
+        <li>Administration réseaux et serveurs</li>
+        <li>Développement d’applications métiers</li>
+        <li>Gestion de systèmes institutionnels</li>
+    </ul>
+</section>
+
+<section class="section download">
+    <h3>CV Desktop JavaFX</h3>
+    <p>
+        Application interactive contenant tous mes projets,
+        démonstrations réelles, animations et navigation moderne.
+    </p>
+	  <p class="note">
+            ⚠ Le CV est une application interactive (Windows Linux Mac  / Java requis)
+        </p>
+  <a href="cv-desktop.zip" id="downloadBtn" class="download-btn1">
+            <span class="btn-text">⬇ Télécharger le CV (Application JavaFX)</span>
+            <span class="spinner"></span>
+        </a>
+
+</section>
+
+
+    <script>
+        const btn = document.getElementById("downloadBtn");
+        const text = btn.querySelector(".btn-text");
+        const fileUrl = btn.getAttribute("href");
+
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            btn.classList.add("loading");
+            text.textContent = "En cours de préparation.............................";                        
+            setTimeout(() => {
+                btn.classList.remove("loading");
+                text.textContent = "Le téléchargement commence maintenant";                                  
+                const link = document.createElement("a");
+                link.href = fileUrl;
+                link.download = "";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }, 2000);
+        });
+    </script>
+
+   <!-- <div class="actions  section1">
+        <a href="#" class="btn primary">Télécharger le CV Desktop</a>
+ 
+    </div>
+	-->
+
+<footer>
+    <p>
+        📧 sakhi.abderrahmen@outlook.fr <br>
+        🌐 GitHub : github.com/sakhi-dev<br>
+		Téléphone : (+213) 663572682
+    </p>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #0f172a;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    color: #38bdf8;
+}
+
+.hero h2 {
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.subtitle {
+    margin: 15px 0 30px;
+    color: #94a3b8;
+}
+
+/* BUTTONS */
+.actions {
+	text-align: center;
+    display: flex;
+    gap: 15px;
+}
+
+/* MODERN BUTTONS */
+.btn {
+    position: relative;
+    padding: 14px 34px;
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 600;
+    letter-spacing: 0.6px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.35s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Primary Button */
+.btn.primary {
+	
+    background: rgba(56, 189, 248, 0.18);
+    color: #38bdf8;
+    border: 1px solid rgba(56, 189, 248, 0.45);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.15);
+}
+
+/* Secondary Button */
+.btn.secondary {
+    background: rgba(15, 23, 42, 0.6);
+    color: #e5e7eb;
+    border: 1px solid rgba(148, 163, 184, 0.35);
+}
+
+/* Hover effect */
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.35),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 10px 40px rgba(56, 189, 248, 0.35);
+}
+
+/* Click effect */
+.btn:active {
+    transform: scale(0.96);
+    box-shadow: 0 4px 20px rgba(56, 189, 248, 0.2);
+}
+
+/* Large button */
+.btn.large {
+    padding: 18px 44px;
+    font-size: 1.1rem;
+}
+
+
+
+/* SECTIONS */
+.section {
+    padding: 70px 15%;
+}
+
+.section.dark {
+    background: #020617;
+}
+
+.section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.list {
+    margin-left: 20px;
+}
+
+.list li {
+    margin-bottom: 10px;
+}
+
+.note {
+    margin-top: 20px;
+    font-style: italic;
+    color: #94a3b8;
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skills span {
+    background: #020617;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: 1px solid #38bdf8;
+    font-size: 0.9rem;
+}
+
+/* DOWNLOAD */
+.download {
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #020617;
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+.section1{
+	text-align: center;
+	 padding: 0px 00px 10px 0px;
+	 justify-content: center;
+	  align-items: center;
+
+}
+/* توسيط كامل الشاشة */
+.center-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+/* الزر */
+.btn-download {
+    position: relative;
+    padding: 18px 40px;
+    font-size: 20px;
+    color: white;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+/* Hover */
+.btn-download:hover {
+    transform: scale(1.05);
+}
+
+/* Spinner */
+.spinner {
+    display: none;
+    width: 22px;
+    height: 22px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-top: 3px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+/* Loading state */
+.btn-download.loading .spinner {
+    display: inline-block;
+}
+
+.btn-download.loading .btn-text {
+    margin-right: 10px;
+}
+
+/* Animation */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.download-btn1 {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 18px 30px;
+    background: #00c6ff;
+    background: linear-gradient(to right, #0072ff, #00c6ff);
+    color: white;
+    font-size: 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.download-btn1:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 198, 255, 0.6);
+}
